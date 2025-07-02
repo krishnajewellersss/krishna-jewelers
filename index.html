@@ -3,687 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>कृष्णा ज्वेलर्स - प्रीमियम आर्टिफिशियल ज्वेलरी | भाटापारा</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>कृष्णा ज्वेलर्स - शुद्ध चांदी की पायल और कान के आइटम्स</title>
     <style>
-        :root {
-            --gold: #D4AF37;
-            --dark: #222;
-            --light: #f8f8f8;
-            --red: #e74c3c;
-        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
+        
         body {
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.7;
+            background-color: #fff9f0;
+            color: #333;
         }
-        /* नया हेडर स्टाइल */
-        .header {
-            background: linear-gradient(135deg, var(--gold), #f1c40f);
-            color: white;
+        
+        .navbar {
+            background: #d4af37;
             padding: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
         }
-        .header h1 {
-            font-size: 2.2rem;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #333;
         }
-        .header p {
-            font-size: 1.1rem;
-            margin-top: 5px;
+        
+        .nav-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
         }
-        /* हीरो सेक्शन */
+        
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center;
             background-size: cover;
-            background-position: center;
-            height: 60vh;
+            height: 300px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             color: white;
-            padding: 0 20px;
+            text-align: center;
         }
-        .hero h2 {
+        
+        .hero-content h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-        .hero p {
+        
+        .hero-content p {
             font-size: 1.2rem;
-            max-width: 700px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
-        .cta-button {
-            display: inline-block;
-            background: var(--gold);
-            color: white;
-            padding: 12px 30px;
-            margin-top: 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-        }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
-        }
-        /* प्रोडक्ट ग्रिड - नया डिजाइन */
-        .product-section {
-            padding: 3rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-            font-size: 2rem;
-            color: var(--dark);
-        }
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--gold);
-            margin: 10px auto;
-            border-radius: 2px;
-        }
+        
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 2rem;
         }
+        
         .product-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
+        
         .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-        .product-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--red);
-            color: white;
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            z-index: 1;
-        }
-        .product-img-container {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
+        
         .product-img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
-            transition: transform 0.5s;
+            border-bottom: 1px solid #eee;
         }
-        .product-card:hover .product-img {
-            transform: scale(1.05);
-        }
+        
         .product-info {
-            padding: 1.5rem;
+            padding: 1rem;
         }
-        .product-title {
-            font-size: 1.2rem;
+        
+        .product-info h3 {
+            color: #d4af37;
             margin-bottom: 0.5rem;
-            color: var(--dark);
         }
-        .product-description {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            min-height: 40px;
-        }
-        .price-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
-        .current-price {
-            font-size: 1.4rem;
+        
+        .price {
+            color: #d4af37;
             font-weight: bold;
-            color: var(--gold);
+            margin: 10px 0;
+            font-size: 1.2rem;
         }
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1rem;
-        }
-        .discount {
-            background: #f1f1f1;
-            color: var(--red);
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        .order-btn {
-            display: block;
-            width: 100%;
-            background: var(--gold);
+        
+        .add-to-cart {
+            background: #d4af37;
             color: white;
             border: none;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
             cursor: pointer;
+            width: 100%;
+            font-weight: bold;
             transition: background 0.3s;
-            text-align: center;
-            text-decoration: none;
         }
-        .order-btn:hover {
+        
+        .add-to-cart:hover {
             background: #c19b2e;
         }
-        /* टेस्टीमोनियल सेक्शन */
-        .testimonials {
-            background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
-            padding: 4rem 1rem;
+        
+        .category-title {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            color: #d4af37;
+            font-size: 1.8rem;
+            padding-top: 1rem;
         }
-        .testimonial-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
             margin-top: 2rem;
         }
-        .testimonial-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
+        
+        .contact-info {
+            margin-top: 1rem;
+            line-height: 1.8;
         }
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: 10px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(212, 175, 55, 0.1);
-            font-family: serif;
-            line-height: 1;
+        
+        .payment-methods {
+            margin-top: 1rem;
         }
-        .rating {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+        
+        .payment-methods img {
+            height: 30px;
+            margin: 0 10px;
+            vertical-align: middle;
         }
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        .customer {
-            display: flex;
-            align-items: center;
-        }
-        .customer-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 3px solid var(--gold);
-        }
-        .customer-info h4 {
-            color: var(--dark);
-            margin-bottom: 3px;
-        }
-        .customer-info p {
-            color: #777;
-            font-size: 0.9rem;
-        }
-        /* यूएसपी सेक्शन */
-        .usp-section {
-            padding: 3rem 1rem;
-            background: white;
-        }
-        .usp-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .usp-card {
-            text-align: center;
-            padding: 2rem 1rem;
-        }
-        .usp-icon {
-            font-size: 2.5rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
-        }
-        .usp-title {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-        }
-        .usp-description {
-            color: #666;
-        }
-        /* फुटर */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: left;
-        }
-        .footer-logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--gold);
-            margin-bottom: 1rem;
-        }
-        .footer-about {
-            margin-bottom: 1.5rem;
-            color: #bbb;
-        }
-        .footer-links h3, .footer-contact h3 {
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-        .footer-links ul {
-            list-style: none;
-        }
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-        .footer-links a {
-            color: #ddd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover {
-            color: var(--gold);
-        }
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            color: #ddd;
-        }
-        .contact-icon {
-            margin-right: 10px;
-            color: var(--gold);
-            width: 20px;
-            text-align: center;
-        }
-        .copyright {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #444;
-            color: #999;
-        }
-        /* व्हाट्सएप बटन */
+        
         .whatsapp-float {
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
             color: #FFF;
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 2px 2px 3px #999;
             z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-        }
-        /* रेस्पॉन्सिव */
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            }
+        
+        .whatsapp-float i {
+            margin-top: 15px;
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-    <!-- हेडर -->
-    <header class="header">
-        <h1>कृष्णा ज्वेलर्स</h1>
-        <p>भाटापारा का प्रीमियम आर्टिफिशियल ज्वेलरी स्टोर</p>
-    </header>
-
+    <!-- नेविगेशन बार -->
+    <nav class="navbar">
+        <div class="logo">कृष्णा ज्वेलर्स</div>
+        <div class="nav-links">
+            <a href="#">होम</a>
+            <a href="#payal">पायल</a>
+            <a href="#kane-ke-items">कान के आइटम्स</a>
+            <a href="#contact">संपर्क</a>
+        </div>
+    </nav>
+    
     <!-- हीरो सेक्शन -->
     <section class="hero">
-        <h2>स्टाइल मेटर्स, प्राइस नहीं!</h2>
-        <p>हाई क्वालिटी आर्टिफिशियल ज्वेलरी जो असली जैसी दिखती है - बिना भारी कीमत के</p>
-        <a href="#products" class="cta-button">अभी खरीदें</a>
-    </section>
-
-    <!-- यूएसपी सेक्शन -->
-    <section class="usp-section">
-        <div class="usp-container">
-            <div class="usp-card">
-                <div class="usp-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3 class="usp-title">प्रीमियम क्वालिटी</h3>
-                <p class="usp-description">हाई-एंड मटीरियल से बने डिजाइन जो लंबे समय तक चलते हैं</p>
-            </div>
-            <div class="usp-card">
-                <div class="usp-icon">
-                    <i class="fas fa-rupee-sign"></i>
-                </div>
-                <h3 class="usp-title">बेस्ट प्राइस</h3>
-                <p class="usp-description">मार्केट से 40% कम कीमत पर बेहतरीन क्वालिटी</p>
-            </div>
-            <div class="usp-card">
-                <div class="usp-icon">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                <h3 class="usp-title">फास्ट डिलीवरी</h3>
-                <p class="usp-description">भाटापारा में 24 घंटे, अन्य शहरों में 3-5 दिन</p>
-            </div>
-            <div class="usp-card">
-                <div class="usp-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-                <h3 class="usp-title">24x7 सपोर्ट</h3>
-                <p class="usp-description">WhatsApp पर कभी भी संपर्क करें</p>
-            </div>
+        <div class="hero-content">
+            <h1>शुद्ध चांदी की पायल और कान के आइटम्स</h1>
+            <p>पारंपरिक डिजाइन, आधुनिक स्टाइल</p>
         </div>
     </section>
-
-    <!-- प्रोडक्ट सेक्शन -->
-    <section class="product-section" id="products">
-        <h2 class="section-title">हमारे बेस्टसेलर प्रोडक्ट्स</h2>
-        <div class="product-grid">
-            <!-- प्रोडक्ट 1 -->
-            <div class="product-card">
-                <div class="product-badge">बेस्टसेलर</div>
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="फैंसी पायल" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">फैंसी पायल</h3>
-                    <p class="product-description">ट्रेंडी डिजाइन, हल्की और आरामदायक, सभी ड्रेसेस के साथ मैच करे</p>
-                    <div class="price-container">
-                        <span class="current-price">₹199</span>
-                        <span class="original-price">₹349</span>
-                        <span class="discount">43% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20फैंसी%20पायल%20(₹199)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
-            </div>
-
-            <!-- प्रोडक्ट 2 -->
-            <div class="product-card">
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="नीरज पायल" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">नीरज पायल</h3>
-                    <p class="product-description">पारंपरिक डिजाइन, शादियों और त्योहारों के लिए परफेक्ट</p>
-                    <div class="price-container">
-                        <span class="current-price">₹249</span>
-                        <span class="original-price">₹399</span>
-                        <span class="discount">38% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20नीरज%20पायल%20(₹249)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
-            </div>
-
-            <!-- प्रोडक्ट 3 -->
-            <div class="product-card">
-                <div class="product-badge">ट्रेंडिंग</div>
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="डिजाइनर झुमके" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">डिजाइनर झुमके</h3>
-                    <p class="product-description">हल्के और स्टाइलिश, रोजमर्रा के उपयोग के लिए आदर्श</p>
-                    <div class="price-container">
-                        <span class="current-price">₹149</span>
-                        <span class="original-price">₹259</span>
-                        <span class="discount">42% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20डिजाइनर%20झुमके%20(₹149)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
-            </div>
-
-            <!-- प्रोडक्ट 4 -->
-            <div class="product-card">
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1605106715994-18d3fecffb98?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="फैशनेबल बाली" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">फैशनेबल बाली</h3>
-                    <p class="product-description">मॉडर्न डिजाइन, युवतियों के बीच बेहद पॉपुलर</p>
-                    <div class="price-container">
-                        <span class="current-price">₹129</span>
-                        <span class="original-price">₹199</span>
-                        <span class="discount">35% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20फैशनेबल%20बाली%20(₹129)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
-            </div>
-
-            <!-- प्रोडक्ट 5 -->
-            <div class="product-card">
-                <div class="product-badge">नया आगमन</div>
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="स्टाइलिश अंगूठी" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">स्टाइलिश अंगूठी</h3>
-                    <p class="product-description">ट्रेंडी डिजाइन, सभी उम्र के लोगों के लिए उपयुक्त</p>
-                    <div class="price-container">
-                        <span class="current-price">₹149</span>
-                        <span class="original-price">₹249</span>
-                        <span class="discount">40% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20स्टाइलिश%20अंगूठी%20(₹149)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
-            </div>
-
-            <!-- प्रोडक्ट 6 -->
-            <div class="product-card">
-                <div class="product-img-container">
-                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="ट्रेंडी बिछिया" class="product-img">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-title">ट्रेंडी बिछिया</h3>
-                    <p class="product-description">कॉम्फर्टेबल फिट, शादियों और पार्टियों के लिए परफेक्ट</p>
-                    <div class="price-container">
-                        <span class="current-price">₹99</span>
-                        <span class="original-price">₹179</span>
-                        <span class="discount">45% OFF</span>
-                    </div>
-                    <a href="https://wa.me/917828721013?text=मुझे%20कृष्णा%20ज्वेलर्स%20से%20ट्रेंडी%20बिछिया%20(₹99)%20ऑर्डर%20करना%20है" class="order-btn">
-                        <i class="fab fa-whatsapp"></i> अभी ऑर्डर करें
-                    </a>
-                </div>
+    
+    <!-- पायल सेक्शन -->
+    <h2 id="payal" class="category-title">पायल कलेक्शन</h2>
+    <div class="product-grid">
+        <!-- पायल 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी की पायल" class="product-img">
+            <div class="product-info">
+                <h3>गोलाकार पायल</h3>
+                <p>हाथ से निर्मित, शुद्ध चांदी</p>
+                <div class="price">₹1,299</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
             </div>
         </div>
-    </section>
-
-    <!-- टेस्टीमोनियल सेक्शन -->
-    <section class="testimonials">
-        <div class="testimonial-container">
-            <h2 class="section-title">हमारे ग्राहक क्या कहते हैं</h2>
-            <div class="testimonial-grid">
-                <!-- समीक्षा 1 -->
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"मैंने कृष्णा ज्वेलर्स से 5 बार खरीदारी की है। क्वालिटी बहुत अच्छी है और कीमत मार्केट से कम। डिलीवरी भी तेज मिलती है। अब तो मेरी सभी दोस्तें भी यहीं से ऑर्डर करती हैं!"</p>
-                    <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="प्रिया शर्मा" class="customer-img">
-                        <div class="customer-info">
-                            <h4>प्रिया शर्मा</h4>
-                            <p>भिलाई</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- समीक्षा 2 -->
-                <div class="testimonial-card">
-                    <div class="rating">★★★★☆</div>
-                    <p class="testimonial-text">"झुमके का डिजाइन बहुत सुंदर है, हालांकि थोड़ा साइज बड़ा हो गया। लेकिन कस्टमर सपोर्ट ने बहुत अच्छा रिस्पॉन्स दिया। अगली बार फिर यहीं से ऑर्डर करूंगी।"</p>
-                    <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="नीतू यादव" class="customer-img">
-                        <div class="customer-info">
-                            <h4>नीतू यादव</h4>
-                            <p>भाटापारा</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- समीक्षा 3 -->
-                <div class="testimonial-card">
-                    <div class="rating">★★★★★</div>
-                    <p class="testimonial-text">"उत्कृष्ट कारीगरी! पारंपरिक डिजाइन बिल्कुल वैसा ही मिला जैसा फोटो में दिखाया था। मेरी बेटी को उसकी शादी के लिए पायल बहुत पसंद आई। धन्यवाद कृष्णा ज्वेलर्स!"</p>
-                    <div class="customer">
-                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="सुमन राठौर" class="customer-img">
-                        <div class="customer-info">
-                            <h4>सुमन राठौर</h4>
-                            <p>रायपुर</p>
-                        </div>
-                    </div>
-                </div>
+        
+        <!-- पायल 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी की पायल" class="product-img">
+            <div class="product-info">
+                <h3>जालीदार पायल</h3>
+                <p>पारंपरिक राजस्थानी डिजाइन</p>
+                <div class="price">₹1,599</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
             </div>
         </div>
-    </section>
-
+        
+        <!-- पायल 3 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी की पायल" class="product-img">
+            <div class="product-info">
+                <h3>झुमके वाली पायल</h3>
+                <p>आधुनिक डिजाइन</p>
+                <div class="price">₹1,899</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+        
+        <!-- पायल 4 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1605106715994-18d3fecffb98?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी की पायल" class="product-img">
+            <div class="product-info">
+                <h3>पारंपरिक पायल</h3>
+                <p>ग्रामीण शैली, भारी वर्क</p>
+                <div class="price">₹2,199</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- कान के आइटम्स सेक्शन -->
+    <h2 id="kane-ke-items" class="category-title">कान के आइटम्स</h2>
+    <div class="product-grid">
+        <!-- आइटम 1 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1605106715994-18d3fecffb98?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी के झुमके" class="product-img">
+            <div class="product-info">
+                <h3>चांदी के झुमके</h3>
+                <p>हल्के और आरामदायक</p>
+                <div class="price">₹899</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+        
+        <!-- आइटम 2 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी के टॉप्स" class="product-img">
+            <div class="product-info">
+                <h3>कान के टॉप्स</h3>
+                <p>मिनिमलिस्ट डिजाइन</p>
+                <div class="price">₹699</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+        
+        <!-- आइटम 3 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी के जड़ाऊ झुमके" class="product-img">
+            <div class="product-info">
+                <h3>जड़ाऊ झुमके</h3>
+                <p>पारंपरिक मुगलई डिजाइन</p>
+                <div class="price">₹2,499</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+        
+        <!-- आइटम 4 -->
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="चांदी के स्टड्स" class="product-img">
+            <div class="product-info">
+                <h3>स्टड्स</h3>
+                <p>आधुनिक डिजाइन</p>
+                <div class="price">₹599</div>
+                <button class="add-to-cart">ऑर्डर करें</button>
+            </div>
+        </div>
+    </div>
+    
     <!-- फुटर -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-about">
-                <div class="footer-logo">कृष्णा ज्वेलर्स</div>
-                <p class="footer-about">भाटापारा का सबसे विश्वसनीय आर्टिफिशियल ज्वेलरी स्टोर। 5 साल से अधिक का अनुभव, 1000+ संतुष्ट ग्राहक।</p>
-            </div>
-            <div class="footer-links">
-                <h3>लिंक्स</h3>
-                <ul>
-                    <li><a href="#">होम</a></li>
-                    <li><a href="#products">प्रोडक्ट्स</a></li>
-                    <li><a href="privacy-policy.html">प्राइवेसी पॉलिसी</a></li>
-                    <li><a href="terms.html">नियम व शर्तें</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>संपर्क करें</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-                    <span>मोपका, भाटापारा, छत्तीसगढ़</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fas fa-phone"></i></span>
-                    <span>+91 7828721013</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fas fa-envelope"></i></span>
-                    <span>krishnajewellers032@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"><i class="fas fa-clock"></i></span>
-                    <span>सुबह 10:00 - शाम 8:00</span>
-                </div>
-            </div>
+    <footer id="contact">
+        <h3>कृष्णा ज्वेलर्स</h3>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> +91 7828721013</p>
+            <p><i class="fas fa-envelope"></i> krishnajewelers@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> आपका पता यहाँ डालें</p>
         </div>
-        <div class="copyright">
-            &copy; 2023 कृष्णा ज्वेलर्स. सभी अधिकार सुरक्षित | डिजाइन एवं विकसित: योगेश
+        <div class="payment-methods">
+            <p><strong>भुगतान विकल्प:</strong></p>
+            <p>UPI: 7828721013@ybl</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Pay_%28GPay%29_Logo_%282018-2020%29.svg" alt="Google Pay">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Paytm_Logo_%28standalone%29.png" alt="Paytm">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/PhonePe_Logo.svg" alt="PhonePe">
         </div>
+        <p style="margin-top: 1rem;">© 2023 कृष्णा ज्वेलर्स. सभी अधिकार सुरक्षित</p>
     </footer>
 
-    <!-- व्हाट्सएप बटन -->
+    <!-- WhatsApp फ्लोट बटन -->
     <a href="https://wa.me/917828721013" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // काउंटडाउन टाइमर
-        function updateCountdown() {
-            const now = new Date();
-            const end = new Date();
-            end.setHours(23, 59, 59, 0);
-            
-            const diff = end - now;
-            const hours = Math.floor(diff / (1000 * 60 * 60)).toString().padStart(2, '0');
-            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-            const secs = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
-            
-            document.getElementById('countdown').innerHTML = 
-                `ऑफर समाप्त होने में: ${hours}:${mins}:${secs}`;
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-
-        // स्क्रॉल पर हेडर इफेक्ट
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
+        // ऑर्डर फंक्शनैलिटी
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.parentElement.querySelector('h3').textContent;
+                const price = this.parentElement.querySelector('.price').textContent;
+                
+                const phoneNumber = "917828721013";
+                const message = `नमस्ते, मुझे कृष्णा ज्वेलर्स से ${productName} (${price}) ऑर्डर करना है। कृपया मुझे और जानकारी दें।`;
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                
+                window.open(whatsappUrl, '_blank');
+            });
         });
     </script>
 </body>
